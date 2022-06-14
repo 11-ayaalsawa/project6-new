@@ -18,7 +18,7 @@
                 <div class="row g-0">
                     <div class="col-md-4 gradient-custom text-center text-white"
               style="border-top-left-radius: .9rem; border-bottom-left-radius: .9rem;">
-              <img src="img/{{ Auth::user()->avatar }}"
+              <img src="storage/{{ Auth::user()->avatar }}"
                 alt="Avatar" height="200px" class=" my-5 mx-3" style="width: 200px;" />
               <h5>{{ Auth::user()->name }}</h5>
               <p>Web Designer</p>

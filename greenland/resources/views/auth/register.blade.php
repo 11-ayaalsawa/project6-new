@@ -163,7 +163,7 @@
                 <div class=" offset-5 mt-3 text-dark" style="font-size: 30px">{{ __('Register') }}</div>
 
                 <div class="card-body p-2" >
-                    <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
+                    {{-- <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="container row mb-3">
                             <div class="col-md-3 col-form-label text-md-end">Add image</div>
@@ -174,7 +174,7 @@
                             <button type="submit" class="btn btn-success">Add</button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <input type="hidden" name="av" value="{{ session('filename') }}">

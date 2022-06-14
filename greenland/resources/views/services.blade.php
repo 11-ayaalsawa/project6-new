@@ -44,7 +44,7 @@
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="img/{{$item['image']}}" alt="service image">
+                            <img class="img-fluid" src="storage/{{$item['image']}}" alt="service image">
                             {{-- @if (route('login')) --}}
                             <div class="hidden courses-overlay">
                                 <a class="btn btn-outline-primary border-2" href="/volunteer/{{$item['id']}}">Volunteer</a> 
