@@ -35,17 +35,17 @@ class LoginController extends Controller
      *
      * @return void
      */
-    protected function authenticated(Request $request, $user)
-          {
-                 if(Auth::user()->role_id == '1')
-                  {
-                         return redirect('admin');   
-                  }
-                 else
-                 {
-                  return redirect()->route('home');   
-                }
-         }
+    // protected function authenticated(Request $request, $user)
+    //       {
+    //              if(Auth::user()->role_id == '1')
+    //               {
+    //                      return redirect('admin');   
+    //               }
+    //              else
+    //              {
+    //               return redirect()->route('home');   
+    //             }
+    //      }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
