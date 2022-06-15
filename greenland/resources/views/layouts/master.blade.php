@@ -88,7 +88,9 @@
             @if (Route::has('login'))
             @auth
             <div class="hidden fixed top-0 px-6 py-4 sm:block ">
-                <a href="{{ url('/home') }}" class="nav-item nav-link"><i class="fa-solid fa-user text-primary mx-3 " style="font-size: 28px"></i></a>
+                {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> --}}
+                <a href="{{ url('/home') }}" class="dropdown-item nav-item nav-link"><i class="fa-solid fa-user text-primary mx-3 " style="font-size: 28px"></i></a>
+                {{-- </div> --}}
             </div>
             @else
                 {{-- <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a> --}}
