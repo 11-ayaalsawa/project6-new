@@ -37,18 +37,14 @@
                         <div class="text-center p-4 pt-0">
                             <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">{{$item['city']}}</div>
                             <h5 class="mb-3">{{$item['title']}}</h5>
-                            <p>{{$item['body']}}</p>
+                            <p>{!! $item['body'] !!}</p>
                             <ol class="breadcrumb justify-content-center mb-0">
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>from {{$item['start_time']}}</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>To {{$item['end_time']}}</li>
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
-<<<<<<< HEAD
-                            <img class="img-fluid" src="storage/{{$item['image']}}" alt="service image">
-=======
-                            <img class="img-fluid" src="/storage/{{($item['image'])}}" alt="service image">
->>>>>>> 7c9de98e4d4d82c0cd70dba83da51cb5cf8c465f
+                            <img class="img-fluid" src="/storage/{{$item['image']}}" alt="service image">
                             {{-- @if (route('login')) --}}
                             <div class="hidden courses-overlay">
                                 <a class="btn btn-outline-primary border-2" href="/volunteer/{{$item['id']}}">Volunteer</a> 
