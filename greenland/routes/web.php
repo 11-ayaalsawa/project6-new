@@ -3,8 +3,12 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 // use TCG\Voyager\Voyager;
 use TCG\Voyager\Facades\Voyager;
+=======
+use TCG\Voyager\facades\Voyager;
+>>>>>>> 28df1ebe3b51fadd286e2a377da5b3aead1dc87c
 
 
 /*
