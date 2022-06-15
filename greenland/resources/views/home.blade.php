@@ -168,7 +168,11 @@
                 </form>
 
                   {{-- <h6>Services</h6> --}}
+<<<<<<< HEAD
+                  {{-- <hr class="mt-0 mb-4">                 --}}
+=======
                   <hr class="mt-0 mb-4">                
+>>>>>>> 28df1ebe3b51fadd286e2a377da5b3aead1dc87c
                 </div>
               </div>
             </div>
