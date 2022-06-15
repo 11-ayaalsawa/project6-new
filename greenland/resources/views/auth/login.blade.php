@@ -87,9 +87,9 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px;">
-                <div class=" offset-5 mt-3 text-dark" style="font-size: 30px">{{ __('Login') }}</div>
+                <div class=" mt-3 text-dark" style="font-size: 30px ;text-align:center;">{{ __('Login') }}</div>
 
-                <div class="card-body p-5">
+                <div class="card-body p-3">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -97,7 +97,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control form-control-md @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
                             
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control form-control-md @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -135,8 +135,8 @@
                         </div> --}}
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-secondary btn-lg btn-block text-body" style=" width: 17vw; color:white !important; ">
+                            <div class="col-md-8" style="margin-left:13em;" >
+                                <button type="submit" class="btn btn-secondary btn-md btn-block text-body" style=" width: 18vw; color:white !important; ">
                                     {{ __('Login') }}
                                 </button>
                                 <div class="row mb-0 mt-2">

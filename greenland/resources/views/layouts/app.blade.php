@@ -35,7 +35,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a> --}}
                 <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-                    <h2 class="m-0"> <i class="fas fa-tree text-primary me-2"></i> Green Land</h2>
+                    <h3 class="m-0"> <i class="fas fa-tree text-primary me-2"></i> Green Land</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
