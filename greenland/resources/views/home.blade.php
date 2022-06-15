@@ -1,6 +1,3 @@
-{{-- @extends('layouts/master') --}}
-{{-- @extends('layouts.app') --}}
-{{-- @extends('layouts.app') --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,7 +112,7 @@
                     <div class="col-md-4 col-sm-12 gradient-custom text-center text-white"
               style="border-top-left-radius: .9rem; border-bottom-left-radius: .9rem;">
               <img src="storage/{{ Auth::user()->avatar }}"
-                alt="Avatar" height="200px" class=" my-5 mx-3 rounded-circle" style="width: 200px;" />
+                alt="Avatar" height="150px" class=" my-5 mx-3 " style="width: 150px;" />
               <h5>{{ Auth::user()->name }}</h5>
               <p>Web Designer</p>
               <i class="far fa-edit mb-5"></i>
@@ -154,7 +151,7 @@
                   <div class="row pt-1">
                     <div class="col-8 mx-3 mb-3">
                       <h6>Avatar</h6>
-                      <input type="file" name="image" id="" class="form-control form-control-lg bg-white " value="{{ Auth::user()->avatar }}" style="border-radius:5px !important ">
+                      <input type="file" name="image" id="" class="form-control form-control-lg bg-white " value="" style="border-radius:5px !important ">
                     </div>
                   </div>
                   {{-- <div class="row pt-1">
@@ -171,7 +168,7 @@
                 </form>
 
                   {{-- <h6>Services</h6> --}}
-                  <hr class="mt-0 mb-4">                
+                  {{-- <hr class="mt-0 mb-4"> --}}
                 </div>
               </div>
             </div>

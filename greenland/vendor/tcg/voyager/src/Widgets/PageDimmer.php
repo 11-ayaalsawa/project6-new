@@ -33,7 +33,8 @@ class PageDimmer extends BaseDimmer
             'title'  => "{$count} {$string}",
             'text'   => __('voyager::dimmer.page_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('voyager::dimmer.page_link_text'),
+                // 'text' => __('voyager::dimmer.page_link_text'),
+                'text' => __('View all application'),
                 // 'link' => route('voyager.pages.index'),
                 'link' => url('/admin/approve'),
             ],

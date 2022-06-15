@@ -84,8 +84,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
-                <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
                 <a href="{{ url('/services') }}" class="nav-item nav-link">Services</a>
+                <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
                 <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
             </div>
             @if (Route::has('login'))
@@ -137,7 +137,7 @@
                         @csrf
                         <div class="input-group">
                             <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address" name="subscribe">
-                            <button class="btn btn-primary">Sign Up</button>
+                            <button class="btn btn-primary">Subscribe</button>
                         </div>
                     </form>
                     <h6 class="text-white mt-4 mb-3">Follow Us</h6>
