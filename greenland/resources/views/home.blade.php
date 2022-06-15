@@ -1,9 +1,3 @@
-{{-- @extends('layouts/master') --}}
-<<<<<<< HEAD
-=======
-{{-- @extends('layouts.app') --}}
->>>>>>> 28df1ebe3b51fadd286e2a377da5b3aead1dc87c
-{{-- @extends('layouts.app') --}}
 <!DOCTYPE html>
 <html lang="en">
 
