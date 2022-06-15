@@ -1,7 +1,11 @@
 {{-- @extends('layouts/master') --}}
+<<<<<<< HEAD
+@extends('layouts.app')
+=======
 {{-- @extends('layouts.app') --}}
 <!DOCTYPE html>
 <html lang="en">
+>>>>>>> 7c9de98e4d4d82c0cd70dba83da51cb5cf8c465f
 
 <head>
     <meta charset="utf-8">

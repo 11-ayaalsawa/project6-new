@@ -153,14 +153,14 @@
 @endif
 
 @section('content')
-<section class="vh-130 bg-image"
+<section class="vh-100 bg-image"
   style="background-image: url('https://images.pexels.com/photos/1277181/pexels-photo-1277181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-repeat: no-repeat; background-size:cover;">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
 <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-9 col-md-9 col-lg-7 col-xl-6 mt-3 mb-3" >
-            <div class="card " style="border-radius: 15px;">
-                <div class=" offset-5 mt-3 text-dark" style="font-size: 30px">{{ __('Register') }}</div>
+            <div class="card pb-3 " style="border-radius: 15px;">
+                <div class=" offset-5 mt-3 mb-3 text-dark" style="font-size: 30px">{{ __('Register') }}</div>
 
                 <div class="card-body p-2" >
                     {{-- <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
@@ -181,7 +181,7 @@
                         <div class="row mb-3 ">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control rounded form-control-lg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control rounded form-control-md @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -194,7 +194,7 @@
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control rounded form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control rounded form-control-md @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -208,7 +208,7 @@
                             <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="tel" class="form-control rounded form-control-lg " name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+                                <input id="phone" type="tel" class="form-control rounded form-control-md " name="phone" value="{{ old('phone') }}" required autocomplete="phone">
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -221,7 +221,7 @@
                             <label for="city" class="col-md-4 col-form-label text-md-end" >{{ __('city Address') }}</label>
 
                             <div class="col-md-6">
-                                <select id="city" type="text" class="form-control form-select bg-white rounded form-control-lg" name="city" value="{{ old('city') }}" required autocomplete="city">
+                                <select id="city" type="text" class="form-control form-select bg-white rounded form-control-md" name="city" value="{{ old('city') }}" required autocomplete="city">
                                     <option selected>Choose...</option>
                                     <option value="Amman">Amman</option>
                                     <option value="Aqaba">Aqaba</option>
@@ -247,7 +247,7 @@
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control rounded form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control rounded form-control-md @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -259,11 +259,11 @@
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control rounded form-control-lg" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control rounded form-control-md" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="form-check d-flex justify-content-center mb-3">
+                        <div class="form-check d-flex justify-content-center mb-4">
                             <input class="form-check-input me-2 rounded" type="checkbox" required value="" id="form2Example3cg" />
                             <label class="form-check-label" for="form2Example3g">
                               I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
@@ -272,7 +272,7 @@
 
                         <div class="d-flex justify-content-center">
                             
-                                <button type="submit" class="btn btn-secondary btn-lg btn-block text-body" style=" width: 35vw; color:white !important; ">
+                                <button type="submit" class="btn btn-secondary btn-md btn-block text-body" style=" width: 27vw; color:white !important; ">
                                     {{ __('Register') }}
                                 </button>
                             
