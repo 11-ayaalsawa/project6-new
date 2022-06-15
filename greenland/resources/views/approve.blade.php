@@ -76,8 +76,10 @@
     {{-- @foreach ($applications as $app) --}}
         {{-- <td>{{ $user_name }}</td>
         <td>{{ $service_name }}</td> --}}
+        <div class="container"  >
         <div class="row">
-        <form action="/admin/approve/done" method="post" class="form-group"> 
+            <div class="col-lg-8 " style="margin-left:20%">
+        <form action="/admin/approve/done" method="post" class="form-group" style="margin-top:5%"> 
             @csrf
             <div class="col-4">
             user ID <input type="number" name="user_id" class="form-control">
@@ -87,5 +89,7 @@
             </div>
             <button type="submit" class="btn btn-success form-control">Approve</button>
         </form></div>
+    </div>
+</div>
     {{-- @endforeach --}}
 @stop

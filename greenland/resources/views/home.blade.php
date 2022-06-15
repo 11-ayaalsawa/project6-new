@@ -1,6 +1,3 @@
-{{-- @extends('layouts/master') --}}
-{{-- @extends('layouts.app') --}}
-{{-- @extends('layouts.app') --}}
 <!DOCTYPE html>
 <html lang="en">
 
