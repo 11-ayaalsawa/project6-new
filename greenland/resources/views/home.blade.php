@@ -19,7 +19,7 @@
                 <div class="row g-0">
                     <div class="col-md-4 gradient-custom text-center text-white"
               style="border-top-left-radius: .9rem; border-bottom-left-radius: .9rem;">
-              <img src="storage/users/{{ Auth::user()->avatar }}"
+              <img src="storage/{{ Auth::user()->avatar }}"
                 alt="Avatar" height="200px" class=" my-5 mx-3" style="width: 200px;" />
               <h5>{{ Auth::user()->name }}</h5>
               <p>Web Designer</p>
@@ -62,12 +62,12 @@
                       <input type="file" name="image" id="" class="form-control form-control-lg " value="{{ Auth::user()->avatar }}" style="border-radius:5px !important ">
                     </div>
                   </div>
-                  <div class="row pt-1">
+                  {{-- <div class="row pt-1">
                     <div class="col-8 mx-3 mb-3">
                       <h6>password</h6>
                       <input type="password" name="password" id="" class="form-control form-control-lg " value="{{ Auth::user()->password }}" style="border-radius:5px !important ">
                     </div>
-                  </div>
+                  </div> --}}
                   <div class="row pt-1">
                     <div class="col-4  mb-3 offset-5" >
                       <button type="submit" class="btn btn-warning lg">Edit Data</button>

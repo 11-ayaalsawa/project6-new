@@ -85,16 +85,16 @@ class Controller extends BaseController
         $file= $request->file('image');
         // dd($file);
         $filename= $file->getClientOriginalName();
-        $file-> move(public_path('/storage/users'), $filename);
-        $filename;
+        $file-> move(public_path('/storage/users/June2022'), $filename);
+        $path='users/June2022/'.$filename;
         $user= User::find($id);
         if(!empty($filename)){
-            $user->avatar=$filename;
+            $user->avatar=$path;
             $user->name = $request->input('name');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
             $user->city = $request->input('city');
-            $user->password = Hash::make($request->input('password'));
+            // $user->password = Hash::make($request->input('password'));
             $user->update();
             return redirect('/home')->with('status','data edited Successfully');
         }
@@ -103,7 +103,7 @@ class Controller extends BaseController
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
             $user->city = $request->input('city');
-            $user->password = $request->input('password');
+            // $user->password = $request->input('password');
             $user->update();
             return redirect('/home')->with('status','data edited Successfully');
         }
