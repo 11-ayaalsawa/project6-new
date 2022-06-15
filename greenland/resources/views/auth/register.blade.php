@@ -221,7 +221,7 @@
                             <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('city Address') }}</label>
 
                             <div class="col-md-6">
-                                <select id="city" type="text" class="form-control rounded form-control-lg" name="city" value="{{ old('city') }}" required autocomplete="city">
+                                <select id="city" type="text" class="form-control form-select bg-white rounded form-control-lg" name="city" value="{{ old('city') }}" required autocomplete="city">
                                     <option selected>Choose...</option>
                                     <option value="Amman">Amman</option>
                                     <option value="Aqaba">Aqaba</option>

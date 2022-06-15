@@ -145,7 +145,7 @@
     <div class="container-xxl py-6">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="text-dark text-uppercase mb-2">Sponsored by </h1>
+                <h1 class="text-dark text-capitalize mb-2">Sponsored by </h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
