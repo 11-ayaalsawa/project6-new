@@ -224,7 +224,7 @@
 
     {{-- <!-- Team Start --> --}}
     <div class="container-xxl py-6">
-        <div class="container">
+        <div class="container" style=" max-width: 900px !important">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6 mb-4">Meet The Team</h1>
             </div>
@@ -232,7 +232,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/anas.png" alt="">
+                            <img class="img-fluid col-md-12" src="img/anas.png" alt="" >
                             <div class="team-social text-center">
                                 <a class="btn btn-square btn-outline-primary border-2 m-1" href="#"><i
                                         class="fab fa-facebook-f"></i></a>

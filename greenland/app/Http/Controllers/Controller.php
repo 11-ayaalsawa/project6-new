@@ -59,7 +59,7 @@ class Controller extends BaseController
               return redirect('/volunteer/'.$service_id.'/user/'.$user_id);
     }
     public function volunteer($service_id,$user_id){
-        DB::UPDATE('UPDATE users SET hold=1, service=? WHERE id=?',[$service_id,$user_id]);
+        DB::UPDATE('UPDATE users SET hold=1, services=? WHERE id=?',[$service_id,$user_id]);
         // $edit= User::find($user_id);
         // $edit->hold = 1;
         // $edit-> service = $service_id;
@@ -155,7 +155,7 @@ class Controller extends BaseController
                     $id=$data->id;
                     DB::insert('INSERT INTO user_services (user_id,service_id) VALUES (?,?)',[$id,$service]);
                     $rollback= User::find($user);
-                    DB::update('UPDATE users SET hold = 0,service="null" WHERE id = ?',[$id]);
+                    DB::update('UPDATE users SET hold = 0,services="null" WHERE id = ?',[$id]);
                     $Data=[
                         'name' => $data->name,
                         'email' => $data->email,
