@@ -44,11 +44,7 @@
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
-<<<<<<< HEAD
-                            <img class="img-fluid" src="/storage/{{($item['image'])}}" alt="service image">
-=======
                             <img class="img-fluid" src="/storage/{{$item['image']}}" alt="service image">
->>>>>>> 28df1ebe3b51fadd286e2a377da5b3aead1dc87c
                             {{-- @if (route('login')) --}}
                             <div class="hidden courses-overlay">
                                 <a class="btn btn-outline-primary border-2" href="/volunteer/{{$item['id']}}">Volunteer</a> 
