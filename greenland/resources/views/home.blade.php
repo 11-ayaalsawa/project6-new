@@ -112,7 +112,7 @@
                     <div class="col-md-4 col-sm-12 gradient-custom text-center text-white"
               style="border-top-left-radius: .9rem; border-bottom-left-radius: .9rem;">
               <img src="storage/{{ Auth::user()->avatar }}"
-                alt="Avatar" height="200px" class=" my-5 mx-3 rounded-circle" style="width: 200px;" />
+                alt="Avatar" height="150px" class=" my-5 mx-3 " style="width: 150px;" />
               <h5>{{ Auth::user()->name }}</h5>
               <p>Web Designer</p>
               <i class="far fa-edit mb-5"></i>

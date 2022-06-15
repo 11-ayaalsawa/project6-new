@@ -61,7 +61,7 @@
                     <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px;">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-lg-square bg-primary">
-                                <i class="fa fa-car text-white"></i><i class="fa-solid fa-bullseye-arrow text-white"></i>
+                                <i class="fa fa-bullseye text-white"></i><i class="fa-solid fa-bullseye-arrow text-white"></i>
                             </div>
                             <div class="ps-4">
                                 <h5>Mission  </h5>

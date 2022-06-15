@@ -103,6 +103,7 @@ class Controller extends BaseController
             return redirect('/home')->with('status','data edited Successfully');
         }
         else{
+            // $user->avatar='/users/default.png';
             $user->name = $request->input('name');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
