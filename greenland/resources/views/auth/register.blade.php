@@ -162,7 +162,7 @@
             <div class="card " style="border-radius: 15px;">
                 <div class=" offset-5 mt-3 text-dark" style="font-size: 30px">{{ __('Register') }}</div>
 
-                <div class="card-body p-2" >
+                {{-- <div class="card-body p-2" >
                     <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="container row mb-3">
@@ -174,10 +174,10 @@
                             <button type="submit" class="btn btn-success">Add</button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <input type="hidden" name="av" value="{{ session('filename') }}">
+                        {{-- <input type="hidden" name="av" value="{{ session('filename') }}"> --}}
                         <div class="row mb-3 ">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
                             <div class="col-md-6">
@@ -221,7 +221,7 @@
                             <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('city Address') }}</label>
 
                             <div class="col-md-6">
-                                <select id="city" type="text" class="form-control rounded form-control-lg" name="city" value="{{ old('city') }}" required autocomplete="city">
+                                <select id="city" type="text" class="form-control form-select bg-white rounded form-control-lg" name="city" value="{{ old('city') }}" required autocomplete="city">
                                     <option selected>Choose...</option>
                                     <option value="Amman">Amman</option>
                                     <option value="Aqaba">Aqaba</option>
