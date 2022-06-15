@@ -6,6 +6,8 @@ use App\Models\post;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -13,7 +15,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Validation\Rules\Exists;
 
 class Controller extends BaseController
 {
@@ -29,7 +31,7 @@ class Controller extends BaseController
         if($request->file('image')){
             $file= $request->file('image');
             $filename= $file->getClientOriginalName();
-            $file-> move(public_path('/Img'), $filename);
+            $file-> move(public_path('/storage/users'), $filename);
             $filename;
         }
         return redirect('/register')->with('filename',$filename);
@@ -80,15 +82,31 @@ class Controller extends BaseController
         return redirect('/services')->with('message','Your Application sent successfully,please wait for admin approval');
     }
     public function edituser(Request $request,$id){
-        // dd($id);
+        $file= $request->file('image');
+        // dd($file);
+        $filename= $file->getClientOriginalName();
+        $file-> move(public_path('/storage/users/June2022'), $filename);
+        $path='users/June2022/'.$filename;
         $user= User::find($id);
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->phone = $request->input('phone');
-        $user->city = $request->input('city');
-        // $user->avatar = $request->input('av');
-        $user->update();
-        return redirect('/home')->with('status','data edited Successfully');
+        if(!empty($filename)){
+            $user->avatar=$path;
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->phone = $request->input('phone');
+            $user->city = $request->input('city');
+            // $user->password = Hash::make($request->input('password'));
+            $user->update();
+            return redirect('/home')->with('status','data edited Successfully');
+        }
+        else{
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->phone = $request->input('phone');
+            $user->city = $request->input('city');
+            // $user->password = $request->input('password');
+            $user->update();
+            return redirect('/home')->with('status','data edited Successfully');
+        }
 
     }
 

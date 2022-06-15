@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Request;
 
 class LoginController extends Controller
 {
@@ -33,6 +35,17 @@ class LoginController extends Controller
      *
      * @return void
      */
+    // protected function authenticated(Request $request, $user)
+    //       {
+    //              if(Auth::user()->role_id == '1')
+    //               {
+    //                      return redirect('admin');   
+    //               }
+    //              else
+    //              {
+    //               return redirect()->route('home');   
+    //             }
+    //      }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

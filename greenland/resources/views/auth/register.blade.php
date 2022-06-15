@@ -218,7 +218,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('city Address') }}</label>
+                            <label for="city" class="col-md-4 col-form-label text-md-end" >{{ __('city Address') }}</label>
 
                             <div class="col-md-6">
                                 <select id="city" type="text" class="form-control form-select bg-white rounded form-control-md" name="city" value="{{ old('city') }}" required autocomplete="city">
