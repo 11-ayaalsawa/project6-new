@@ -177,7 +177,7 @@
                     </form> --}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <input type="hidden" name="av" value="{{ session('filename') }}">
+                        {{-- <input type="hidden" name="av" value="{{ session('filename') }}"> --}}
                         <div class="row mb-3 ">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
                             <div class="col-md-6">
