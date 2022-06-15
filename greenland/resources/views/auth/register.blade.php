@@ -162,8 +162,8 @@
             <div class="card " style="border-radius: 15px;">
                 <div class=" offset-5 mt-3 text-dark" style="font-size: 30px">{{ __('Register') }}</div>
 
-                {{-- <div class="card-body p-2" >
-                    <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
+                <div class="card-body p-2" >
+                    {{-- <form method="post" action="{{route('images.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="container row mb-3">
                             <div class="col-md-3 col-form-label text-md-end">Add image</div>
