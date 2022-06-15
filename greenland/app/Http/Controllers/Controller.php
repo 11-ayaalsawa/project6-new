@@ -83,12 +83,16 @@ class Controller extends BaseController
     }
     public function edituser(Request $request,$id){
         $file= $request->file('image');
-        // dd($file);
-        $filename= $file->getClientOriginalName();
-        $file-> move(public_path('/storage/users/June2022'), $filename);
-        $path='users/June2022/'.$filename;
+        $path= "";
+        if (!empty($file)) {
+            $filename= $file->getClientOriginalName();
+            $file-> move(public_path('/storage/users/June2022'), $filename);
+            $path='users/June2022/'.$filename;
+        }
+        $path;
+        // dd($path);
         $user= User::find($id);
-        if(!empty($filename)){
+        if(!empty($file)){
             $user->avatar=$path;
             $user->name = $request->input('name');
             $user->email = $request->input('email');

@@ -151,7 +151,7 @@
                   <div class="row pt-1">
                     <div class="col-8 mx-3 mb-3">
                       <h6>Avatar</h6>
-                      <input type="file" name="image" id="" class="form-control form-control-lg bg-white " value="{{ Auth::user()->avatar }}" style="border-radius:5px !important ">
+                      <input type="file" name="image" id="" class="form-control form-control-lg bg-white " value="" style="border-radius:5px !important ">
                     </div>
                   </div>
                   {{-- <div class="row pt-1">
@@ -168,11 +168,7 @@
                 </form>
 
                   {{-- <h6>Services</h6> --}}
-<<<<<<< HEAD
-                  {{-- <hr class="mt-0 mb-4">                 --}}
-=======
-                  <hr class="mt-0 mb-4">                
->>>>>>> 28df1ebe3b51fadd286e2a377da5b3aead1dc87c
+                  {{-- <hr class="mt-0 mb-4"> --}}
                 </div>
               </div>
             </div>

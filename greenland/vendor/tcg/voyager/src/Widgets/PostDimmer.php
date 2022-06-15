@@ -23,7 +23,8 @@ class PostDimmer extends BaseDimmer
     {
         $count = Voyager::model('Post')->count();
         // $string = trans_choice('voyager::dimmer.post', $count);
-        $string = trans_choice('voyager::dimmer.post', $count);
+        // $string = trans_choice('voyager::dimmer.post', $count);
+        $string = 'services';
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-news',
@@ -31,6 +32,7 @@ class PostDimmer extends BaseDimmer
             'text'   => __('voyager::dimmer.post_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('voyager::dimmer.post_link_text'),
+                'text' => __('View all services'),
                 'link' => route('voyager.posts.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
