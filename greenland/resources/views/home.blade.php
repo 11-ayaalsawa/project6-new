@@ -93,7 +93,7 @@
         </div>
     </nav>
     <!-- Navbar End -->
-<div class="container  text-dark px-3 mt-3">
+<div class="container  text-dark px-3 mt-0">
     @if (session('status'))
         <div class="alert alert-success" role="alert">
             {{ session('status') }}

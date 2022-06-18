@@ -1,7 +1,7 @@
 @extends('layouts/master')
 
 @section('content')
-    <div class="container mt-3 text-dark px-3">
+    <div class="container mt-0 text-dark px-3">
         @if (session('message'))
             <div class="alert alert-success" role="alert">
                 {{ session('message') }}

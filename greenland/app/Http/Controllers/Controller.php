@@ -156,7 +156,7 @@ class Controller extends BaseController
         if (empty($calldata)) {
             foreach($callData as $data){
                 // dd($data);
-                if($user == $data->id && $service == $data->service){
+                if($user == $data->id && $service == $data->services){
                     $id=$data->id;
                     DB::insert('INSERT INTO user_services (user_id,service_id) VALUES (?,?)',[$id,$service]);
                     $rollback= User::find($user);
