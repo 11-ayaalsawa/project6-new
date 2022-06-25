@@ -144,7 +144,10 @@ class Controller extends BaseController
         return redirect('/contact')->with('message', 'Thank you for contacting us, we will respond to you soon');
     }
     public function render(){
-        return view('approve');
+        $users = DB::select('SELECT * from users where hold = 1');
+        $services= DB::select('SELECT * FROM posts');
+        // dd($users[0]->name);
+        return view('approve')->with('users',$users)->with('service',$services);
     }
 
     public function aprrove(Request $request){

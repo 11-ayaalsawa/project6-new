@@ -54,17 +54,6 @@
     </style>
 @stop
 
-{{-- @section('page_title', __('voyager::generic.'
-.($edit ? 'edit' : 'add')).' '.$dataType->getTranslatedAttribute('display_name_singular')) --}}
-
-{{-- @section('page_header')
-    <h1 class="page-title">
-        <i class="{{ $dataType->icon }}"></i>
-        {{ __('voyager::generic.'.($edit ? 'edit' : 'add')).' '.$dataType->getTranslatedAttribute('display_name_singular') }}
-    </h1>
-    @include('voyager::multilingual.language-selector')
-@stop --}}
-
 @section('content')
 <div class="container">
     @if (session('message'))
@@ -73,23 +62,31 @@
         </div>
     @endif
 </div>
-    {{-- @foreach ($applications as $app) --}}
-        {{-- <td>{{ $user_name }}</td>
-        <td>{{ $service_name }}</td> --}}
-        <div class="container"  >
-        <div class="row">
-            <div class="col-lg-8 " style="margin-left:20%">
-        <form action="/admin/approve/done" method="post" class="form-group" style="margin-top:5%"> 
-            @csrf
-            <div class="col-4">
-            user ID <input type="number" name="user_id" class="form-control">
-            </div>
-            <div class="col-4">
-            Service ID <input type="number" name="service_id" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success form-control">Approve</button>
-        </form></div>
+<div class="container"  >
+    <div class="row">
+        <div class="col-lg-8 " style="margin-left:20%">
+            <table class="table ">
+                <th>User name</th>
+                <th>Service name</th>
+                <th>Status</th>
+                @foreach ($users as $user)
+                    <tr>
+                        <td>{{$user->name}}</td>
+                        <td>{{$service[$user->services]->title}}</td>
+                        <td><form action="/admin/approve/done" method="post" class="form-group" style="margin-top:5%"> 
+                            @csrf
+                            <div class="col-4">
+                            <input type="hidden" name="user_id" class="form-control" value='{{$user->id}}'>
+                            </div>
+                            <div class="col-4">
+                            <input type="hidden" name="service_id" class="form-control" value='{{$user->services}}'>
+                            </div>
+                            <button type="submit" class="btn btn-success ">Approve</button>
+                        </form></td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
     </div>
 </div>
-    {{-- @endforeach --}}
 @stop
