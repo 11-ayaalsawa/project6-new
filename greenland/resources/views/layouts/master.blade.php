@@ -83,10 +83,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
-                <a href="{{ url('/services') }}" class="nav-item nav-link">Services</a>
-                <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
-                <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
+                <a href="{{ url('/') }}" class="nav-item nav-link {{ Request::is('/') ? 'active' : null }}">Home</a>
+                <a href="{{ url('/services') }}" class="nav-item nav-link {{ Request::is('services') ? 'active' : null }}">Services</a>
+                <a href="{{ url('/about') }}" class="nav-item nav-link {{ Request::is('about') ? 'active' : null }}">About</a>
+                <a href="{{ url('/contact') }}" class="nav-item nav-link  {{ Request::is('contact') ? 'active' : null }}">Contact</a>
             </div>
             @if (Route::has('login'))
             @auth
