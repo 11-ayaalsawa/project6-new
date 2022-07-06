@@ -76,7 +76,7 @@ class Controller extends BaseController
             'service_id' => $posts['id']
         );
         mail::send('mail.volunteer', $data, function($message) use($data){
-        $message->to('anasq0q@gmail.com');
+        $message->to('ayaalsawa279@gmail.com');
         $message->from($data['email']);
         $message->subject('volunteering');});
         return redirect('/services')->with('message','Your Application sent successfully,please wait for admin approval');
@@ -136,7 +136,7 @@ class Controller extends BaseController
             'messages' => $request->input('message'),
         ];
         mail::send('mail.contact', $data,function($message) use($data){
-            $message->to('anasq0q@gmail.com');
+            $message->to('ayaalsawa279@gmail.com');
             $message->from($data['email']);
             $message->subject($data['subject']);
         });
@@ -156,7 +156,7 @@ class Controller extends BaseController
         if (empty($calldata)) {
             foreach($callData as $data){
                 // dd($data);
-                if($user == $data->id && $service == $data->service){
+                if($user == $data->id && $service == $data->services){
                     $id=$data->id;
                     DB::insert('INSERT INTO user_services (user_id,service_id) VALUES (?,?)',[$id,$service]);
                     $rollback= User::find($user);
